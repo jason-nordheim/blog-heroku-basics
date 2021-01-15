@@ -82,7 +82,7 @@ Next we need to add some configuration to our `package.json` so that Heroku has 
 
 ```json
 {
-  "name": "Express Server",
+  "name": "Server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -108,7 +108,7 @@ Updating the `package.json` with our `"engines"` should result in a `package.jso
 
 ```json
 {
-  "name": "Express Server",
+  "name": "Server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -138,7 +138,7 @@ We do this by modifying our `package.json`. All of the command for our applicati
 
 ```json
 {
-  "name": "Express Server",
+  "name": "Server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -153,7 +153,7 @@ We do this by modifying our `package.json`. All of the command for our applicati
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "4.17.1"
   }
 }
 ```
