@@ -1,14 +1,14 @@
 {
-  "name": "Express Server",
+  "name": "Server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "engines": {
-    "node": "14.0.0",
-    "npm": "6.14.10"
+    "node": "14.x",
+    "npm": "6.x"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
