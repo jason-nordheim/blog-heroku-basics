@@ -96,12 +96,30 @@ git remote add ALIAS PROJECT_URL
 
 > If the `git remote add heroku PROJECT_URL` produces a message saying `fatal: remote heroku already exists` that is totally fine. You are seeing that output because the Heroku CLI already took care of adding it for you.
 
-Now that git knowns where our remote repository is located, we need to use the `git push REMOTE BRANCH` command to send our code. The `REMOTE` is a reference to the alias defined earlier (`heroku`), and the default branch in `master`. 
+Now that git knowns where our remote repository is located, we need to use the `git push REMOTE BRANCH` command to send our code. The `REMOTE` is a reference to the alias defined earlier (`heroku`), and the default branch in `master`.
 
-If you've followed along verbatim, the `push` command should be: 
+If you've followed along verbatim, the `push` command should be:
 
-```sh 
-git push heroku master 
-``` 
+```sh
+git push heroku master
+```
 
+This command should produce several lines of text within the terminal window providing information on what is happening at each step. First it will copy the repository over to the remote repository Heroku just setup for you, then create the runtime environment (Node/NPM), then install the associated binaries, build the dependencies, and perform basic tree shaking to minify the deployed code bundle.
 
+If this was successful, you will see a message near the end saying `Build Successful`. Then `Launching...` followed by the version number (`v1` if you got this working on the first try).
+
+## Verifying Deployment
+
+As with anything, it's good to verify that things are working. Since our express application is very basic; containing a single route handler for just GET requests to `/`, we can simply open a browser and navigate to the public URL (provided by Heroku) for our application.
+
+If you're route-handler looks like mine - opening the page in the browser should show the JSON object we told our express application to respond with anytime a GET request to the `/` (root) directory occurs.
+
+In my case:
+
+```js
+{"message":"hello from express"}
+```
+
+# Congratulations
+
+Congratulations! You've now successfully deployed an Express application to Heroku.
